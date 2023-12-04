@@ -1,0 +1,282 @@
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: none;
+    }
+    *::before, *::after{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    .container {
+      max-width: 1020px;
+      width: 100%;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+    li {
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+    }
+
+    header {
+      background: rgb(252, 179, 43);
+      min-height: 120px;
+      cursor: default;
+      z-index: 9999;
+    }
+    nav {
+      cursor: default;
+    }
+     .header__nav  .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between  ;
+    }
+    .header__menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .header__title {
+      font-size: 50px;
+      font-family: inherit;
+      text-transform: capitalize;
+      color: #fff;
+      animation: shadow 5s ease-in-out alternate;
+      position: relative;
+    }
+    @keyframes shadow {
+      0% {
+        filter: drop-shadow(0px 0px 0px #fff);
+      }
+      50% {
+        filter: drop-shadow(0px 0px 0px #fd0808)
+      }
+      100%{
+        filter: drop-shadow(0px 0px 0px #fd0808)
+      }
+    }
+
+    .header__links {
+      font-size: 19px;
+      font-family: inherit;
+      color: #fff;
+      font-weight: 400;
+      transition: 350ms all ease-in;
+    }
+    .header__links:hover {
+      color: black;
+    }
+
+
+    
+    /* курсор */
+
+    @font-face {
+      font-family: 'Teko';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/teko/v20/LYjYdG7kmE0gV69VVPPdFl06VN8XG4S11zY.ttf) format('truetype');
+    }
+    
+    html {
+      font-family: 'Teko', sans-serif;
+      font-size: calc(14px + ((100vw - 400px) / 80));
+      line-height: 1.5;
+    }
+    
+    @media screen and (max-width: 400px) {
+      html {
+        font-size: 14px;
+      }
+    }
+    
+    @media screen and (min-width: 1200px) {
+      html {
+        font-size: 24px;
+      }
+    }
+    
+    body {
+      height: 100%;
+      overflow: hidden;
+      background-color: #000000;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    .navigation {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100vw;
+    }
+    
+    .navigation__link {
+      position: absolute;
+    }
+    
+    .navigation__link:nth-of-type(1) {
+      top: 9rem;
+      left: 9rem;
+    }
+    
+    .navigation__link:nth-of-type(2) {
+      top: 9rem;
+      right: 9rem;
+    }
+    
+    .navigation__link:nth-of-type(3) {
+      right: 9rem;
+      bottom: 9rem;
+    }
+    
+    .navigation__link:nth-of-type(4) {
+      left: 9rem;
+      bottom: 9rem;
+    }
+    
+    .navigation__link::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      height: 5rem;
+      width: 5rem;
+      display: block;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      transition: transform 0.3s cubic-bezier(0.36, 0.02, 0.25, 1.31);
+    }
+    
+    .navigation__link:hover::after {
+      transform: translateX(-50%) translateY(-50%) scale(3);
+    }
+    
+    .navigation__title {
+      color: #ffffff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      font-size: 1.5rem;
+    }
+    
+    .navigation__text {
+      color: #ffffff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      opacity: 0;
+    }
+    
+    .navigation__text--active {
+      opacity: 1;
+    }
+    
+    .navigation__text-layer {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-50%) translateY(-50%);
+      font-size: 10rem;
+    }
+    
+    @-webkit-keyframes move-layer-left {
+      from {
+        transform: translateX(-50%) translateY(-50%);
+      }
+    
+      50% {
+        transform: translateX(calc(-50% - 5px)) translateY(-50%);
+      }
+    
+      to {
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+    
+    @keyframes move-layer-left {
+      from {
+        transform: translateX(-50%) translateY(-50%);
+      }
+    
+      50% {
+        transform: translateX(calc(-50% - 5px)) translateY(-50%);
+      }
+    
+      to {
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+    
+    @-webkit-keyframes move-layer-right {
+      from {
+        transform: translateX(-50%) translateY(-50%);
+      }
+    
+      50% {
+        transform: translateX(calc(-50% + 5px)) translateY(-50%);
+      }
+    
+      to {
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+    
+    @keyframes move-layer-right {
+      from {
+        transform: translateX(-50%) translateY(-50%);
+      }
+    
+      50% {
+        transform: translateX(calc(-50% + 5px)) translateY(-50%);
+      }
+    
+      to {
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+    
+    .navigation__text-layer:nth-of-type(1) {
+      z-index: 1;
+    }
+    
+    .navigation__text-layer:nth-of-type(2) {
+      color: #25CED1;
+    }
+    
+    .navigation__text-layer:nth-of-type(3) {
+      color: #EA526F; 
+    }
+    
+    .navigation__text-layer--glitch:nth-of-type(2) {
+      -webkit-animation: move-layer-left 0.5s cubic-bezier(0.36, 0.02, 0.25, 1.31);
+      animation: move-layer-left 0.5s cubic-bezier(0.36, 0.02, 0.25, 1.31);
+    }
+    
+    .navigation__text-layer--glitch:nth-of-type(3) {
+      -webkit-animation: move-layer-right 0.5s cubic-bezier(0.36, 0.02, 0.25, 1.31);
+      animation: move-layer-right 0.5s cubic-bezier(0.36, 0.02, 0.25, 1.31);
+    }
+    
+    .cursor-replacement {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      pointer-events: none;
+      height: 100vh;
+      width: 100vw;
+    }
