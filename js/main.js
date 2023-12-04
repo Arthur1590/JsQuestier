@@ -1,4 +1,11 @@
 
+let x, y, z;
+x = parseFloat(prompt('Введите первое число'));
+y = parseFloat(prompt('Введите второе число'));
+z = parseFloat(prompt('Введите третье число'));
+
+let average = (x + y + z) / 3;
+console.log('The average value is: ' + average);
 
 let userName = prompt('Ваше имя');
 console.log('Меня зовут ' + userName);
@@ -26,17 +33,9 @@ let endmss = 'Конец опроса';
 console.log(endmss);
 
 
-let x, y, z;
-x = parseFloat(prompt('Введите первое число'));
-y = parseFloat(prompt('Введите второе число'));
-z = parseFloat(prompt('Введите третье число'));
-
-let average = (x + y + z) / 3;
-console.log('The average value is: ' + average);
 
 
-// 
-
+//
 const EVENT_PLACEHOLDER = {
   clientX: window.innerWidth / 2,
   // clientX: window.innerWidth / 5,
